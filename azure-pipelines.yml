@@ -13,7 +13,7 @@ steps:
 
 - task: SSH@0
   inputs:
-    sshEndpoint: PingService Server   # Name of the SSH service connection
+    sshEndpoint: PingServiceServer   # Name of the SSH service connection
     runOptions: 'commands'
     commands: |
       echo "Running commands on remote server"
