@@ -10,12 +10,16 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '18.x'
-  displayName: 'Install Node.js'
 
-- script: |
-    npm install
-    npm run build
-  displayName: 'npm install and build'
+- task: SSH@0
+  inputs:
+    sshEndpoint: '52.191.62.203'  # Name of the SSH service connection
+    runOptions: 'commands'
+    commands: |
+      echo "Running commands on remote server"
+      ssh azureuser@52.191.62.203 mkdir testing
+      # Add your SSH commands here
+      # For example:
+      # ssh user@server 'command1'
+      # ssh user@server 'command2'
+  displayName: 'SSH into server and perform tasks'
