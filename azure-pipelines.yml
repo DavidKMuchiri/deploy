@@ -13,11 +13,11 @@ steps:
 
 - task: SSH@0
   inputs:
-    sshEndpoint: '52.191.62.203'  # Name of the SSH service connection
+    sshEndpoint: PingService Server   # Name of the SSH service connection
     runOptions: 'commands'
     commands: |
       echo "Running commands on remote server"
-      ssh azureuser@52.191.62.203 mkdir testing
+      mkdir testing
       # Add your SSH commands here
       # For example:
       # ssh user@server 'command1'
