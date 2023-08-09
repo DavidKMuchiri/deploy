@@ -26,4 +26,4 @@ steps:
       # ssh user@server 'command2'
   displayName: 'SSH into server and perform tasks'
 
-- task: 
+
