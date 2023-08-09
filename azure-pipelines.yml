@@ -19,7 +19,7 @@ steps:
       echo "Running commands on remote server"
       mkdir testing
       cd testing
-      git clone 
+      git clone $(Build.Repository.Uri)
       # Add your SSH commands here
       # For example:
       # ssh user@server 'command1'
