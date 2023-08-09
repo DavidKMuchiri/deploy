@@ -18,8 +18,12 @@ steps:
     commands: |
       echo "Running commands on remote server"
       mkdir testing
+      cd testing
+      git clone 
       # Add your SSH commands here
       # For example:
       # ssh user@server 'command1'
       # ssh user@server 'command2'
   displayName: 'SSH into server and perform tasks'
+
+- task: 
