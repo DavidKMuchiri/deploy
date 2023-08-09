@@ -17,7 +17,7 @@ steps:
     runOptions: 'commands'
     commands: |
       echo "Running commands on remote server"
-      git clone $(Build.Repository.Uri)
+      echo $(Build.Repository.Uri)
   displayName: 'SSH into server and perform tasks'
 
 
