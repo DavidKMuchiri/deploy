@@ -1,0 +1,23 @@
+# Node.js
+# Build a general Node.js project with npm.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+
+- task: SSH@0
+  inputs:
+    sshEndpoint: PingServiceServer   # Name of the SSH service connection
+    runOptions: 'commands'
+    commands: |
+      echo "Running commands on remote server"
+      git clone $(Build.Repository.Uri).git 2>&1
+  displayName: 'SSH into server and perform tasks'
+
+
